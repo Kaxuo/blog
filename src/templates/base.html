@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<!-- Going to make sure every file extends from bast html , will include this file -->
+{% include 'head.html' %}
+<body>
+    {% include 'header.html' %}
+    <!-- content below unique to the page  -->
+    {% block content %}
+    {% endblock content %}
+    <!-- content above unique to the page  -->
+
+    {% include 'footer.html' %}
+
+    {% include 'scripts.html' %}
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+<!-- YOU HADE TO ADD STATIC TO ALL FILES MISSING FROM SRC -->
+<!-- everything is wrapped into this "block content " and displayed in base html  -->
+{% block content %}
+<h1> This is the results of your search</h1>
+{% for result in queryset %}
+
+<a href='{{ result.get_absolute_url }}'> {{ result.title }}</a>
+<br>
+{% endfor %}
+
+{% endblock %}
